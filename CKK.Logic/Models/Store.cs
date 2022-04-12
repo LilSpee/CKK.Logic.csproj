@@ -33,15 +33,15 @@ namespace CKK.Logic.Models
         }
         public void AddStoreItem(Product prod)
         {
-            if (_product1 != null)
+            if (_product1 == null)
             {
                 _product1 = prod;
             }
-            else if (_product2 != null)
+            else if (_product2 == null)
             {
                 _product2 = prod;
             }
-            else if (_product3 != null)
+            else if (_product3 == null)
             {
                 _product3 = prod;
             }
@@ -52,18 +52,26 @@ namespace CKK.Logic.Models
             {
                 _product1 = null;
             }
+            if(productNum == _product2.GetId())
+            {
+                _product2 = null;
+            }
+            if(productNum == _product3.GetId())
+            {
+                _product3 = null;
+            }
         }
         public Product GetStoreItem(int productNum)
         {
-            if (productNum == _product1.GetId())
+            if (productNum == 1)
             {
                 return _product1;
             }
-            if (productNum == _product2.GetId())
+            if (productNum == 2)
             {
                 return _product2;
             }
-            if (productNum == _product3.GetId())
+            if (productNum == 3)
             {
                 return _product3;
             }
