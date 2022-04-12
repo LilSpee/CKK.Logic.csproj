@@ -48,15 +48,15 @@ namespace CKK.Logic.Models
         }
         public void RemoveStoreItem(int productNum)
         {
-            if(productNum == _product1.GetId())
+            if(productNum == 1)
             {
                 _product1 = null;
             }
-            if(productNum == _product2.GetId())
+            if(productNum == 2)
             {
                 _product2 = null;
             }
-            if(productNum == _product3.GetId())
+            if(productNum == 3)
             {
                 _product3 = null;
             }
@@ -88,11 +88,11 @@ namespace CKK.Logic.Models
             }
             if (id == _product2.GetId())
             {
-                return _product1;
+                return _product2;
             }
             if (id == _product3.GetId())
             {
-                return _product1;
+                return _product3;
             }
             else
             {
